@@ -3,7 +3,14 @@
 	<title>Sam's blog about Unicorns</title>
 </head>
 <body>
-	<h1>Hello world.</h1>
-	<p>All this view stuff seems pretty hardcore, honestly.</p>
+	<h1>These things happened to you</h1>
+	<p>Wait don't go. You know it happened.</p>
+	<div>
+		{% for post in posts %}
+		<h2><a href="">{{ post.title }}</a></h2>
+		<p>published: {{ post.published_date }}</p>
+		<p>{{ post.text|linebreaksbr }}</p>
+		{% endfor %}
+	</div>
 </body>
 </html>
